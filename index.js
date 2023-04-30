@@ -12,7 +12,9 @@ app.set("view engine", "ejs"); // set the view engine to EJS
 
 app.get("/content", (req, res) => {
   // Generate some new content
-  var content =  Math.random();
+  // var content =  Math.random();
+
+  
 
   // Send the new content back in the response
   res.send(content.toString());

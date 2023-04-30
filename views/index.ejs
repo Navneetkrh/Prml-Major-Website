@@ -112,7 +112,7 @@ mobileMenuButton.addEventListener("click", function() {
                        
                         
                       
-                        <script>
+                        <!-- <script>
                           // Add an event listener to the button
                           document.getElementById("load-button").addEventListener("click", function() {
                             // Make an AJAX request to fetch the new content
@@ -126,7 +126,7 @@ mobileMenuButton.addEventListener("click", function() {
                             };
                             xhr.send();
                           });
-                        </script>
+                        </script> -->
           <div class="py-6 md:w-1/2 lg:w-3/5 md:py-0 ">
             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
             <lottie-player class="ease-in-out" src="https://assets3.lottiefiles.com/packages/lf20_mv7XEWVcaw.json"  background="transparent"  speed="1"  style="width: 400px; height: 400px;"  loop  autoplay></lottie-player>
@@ -245,5 +245,19 @@ mobileMenuButton.addEventListener("click", function() {
     </div>
   </div>
 </footer>
-
+<script>
+  // Add an event listener to the button
+  document.getElementById("load-button").addEventListener("click", function() {
+    // Make an AJAX request to fetch the new content
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "/content", true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        // Update the content with the new data
+        document.getElementById("content").innerHTML = xhr.responseText;
+      }
+    };
+    xhr.send();
+  });
+</script>
 </html>
