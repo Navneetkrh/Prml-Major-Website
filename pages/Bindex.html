@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+        
+  <link rel="icon" type="image/x-icon" href="mass/favicon.ico">
+  <script src="../index.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>PRML MAJOR</title>
+</head>
+<body>
+  
+
+  <nav class="fixed w-full bg-[#FFDFAE] shadow-lg z-10 rounded-b-xl sm:rounded-b-lg">
+    <div class="px-4 mx-auto max-w-7xl sm:px-2 lg:px-8">
+      <div class="flex items-center justify-between h-14 sm:h-16 ">
+        <div class="flex items-center flex-shrink-0">
+          <img class="w-32 h-32 sm:h-32 sm:w-32" src="mass/Screenshot-2023-04-29-220649h.svg" alt="Logo">
+        </div>
+        <div class="hidden sm:block sm:ml-6">
+          <ul class="flex space-x-4">
+            <li><a href="#" class="mr-4 font-medium text-black hover:text-blue-500">Home</a></li> 
+            <li><a href="#" class="mr-4 font-medium text-black hover:text-blue-500">Analysis</a></li>
+            <li><a href="#" class="mr-4 font-medium text-black hover:text-blue-500">Dataset</a></li>
+            <li><a href="#" class="font-medium text-black hover:text-blue-500">About</a></li>
+          </ul>
+        </div>
+        <div class="flex sm:hidden">
+          <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-blue-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!-- Icon when menu is closed. -->
+            <!--
+              Heroicon name: menu
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <!-- Icon when menu is open. -->
+            <!--
+              Heroicon name: x
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#" class="block px-3 py-2 text-base font-medium text-black rounded-md hover:text-blue-500">Home</a>
+        <a href="#" class="block px-3 py-2 text-base font-medium text-black rounded-md hover:text-blue-500">Analysis</a>
+        <a href="#" class="block px-3 py-2 text-base font-medium text-black rounded-md hover:text-blue-500">Dataset</a>
+        <a href="#" class="block px-3 py-2 text-base font-medium text-black rounded-md hover:text-blue-500">About</a>
+        </div>
+        
+          </div>
+        </nav>
+  
+        <script>
+          // your JavaScript code here
+          const mobileMenuButton = document.getElementById("mobile-menu-button");
+const mobileMenu = document.getElementById("mobile-menu");
+    mobileMenu.setAttribute("aria-expanded", "false");
+    mobileMenu.classList.add("hidden");
+    mobileMenu.classList.remove("block");
+mobileMenuButton.addEventListener("click", function() {
+  if (mobileMenu.getAttribute("aria-expanded") === "false") {
+    mobileMenu.setAttribute("aria-expanded", "true");
+    mobileMenu.classList.add("block");
+    mobileMenu.classList.remove("hidden");
+  } else {
+    mobileMenu.setAttribute("aria-expanded", "false");
+    mobileMenu.classList.add("hidden");
+    mobileMenu.classList.remove("block");
+  }
+});
+
+        </script>  
+
+
+
+      
+      <section class="hero bg-[url('https://images.hdqwalls.com/download/firewatch-game-1680x1050.jpg')] bg-fixed bg-cover scroll-smooth ">
+
+        <div class="container flex flex-col items-center justify-center px-5 py-16 mx-auto md:flex-row">
+          <div class="flex flex-col items-start md:w-1/2 lg:w-2/5 md:items-center">
+            <h1 class="mb-8 text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
+              Wikipedia Toxic Comment Classification <%= name %>
+            </h1>
+            <p class="mb-8 text-xl leading-relaxed text-white md:text-2xl lg:text-3xl">
+              Stop Toxic Comments. Empower Your Community.
+            </p>
+            <a href="#" class="px-6 py-3 text-lg font-bold tracking-wide text-blue-500 uppercase bg-white rounded-full hover:bg-blue-500 hover:text-white">
+              Get Started
+            </a>
+          </div>
+                        <!-- Add a span to display the name -->
+<span id="name"></span>
+<!-- Add a button to update the name -->
+<button id="update-name" class="text-white">Update Name</button>
+          <div class="py-6 md:w-1/2 lg:w-3/5 md:py-0 ">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player class="ease-in-out" src="https://assets3.lottiefiles.com/packages/lf20_mv7XEWVcaw.json"  background="transparent"  speed="1"  style="width: 400px; height: 400px;"  loop  autoplay></lottie-player>
+            <!-- <img class="w-full" src="https://lottiefiles.com/142662-chameleon-changing-colour" alt="Toxic Comment Classification"> -->
+          </div>
+        </div>
+     
+
+<!-- interactive section -->
+
+<div class="flex flex-wrap items-center justify-center  shadow-lg overflow-hidden rounded-t-[20px] bg-white">
+  <!-- start overview section -->
+  <div class="p-8 bg-white rounded-lg shadow-t-md">
+    <h2 class="mb-4 text-2xl font-bold">The Problem of Toxic Comments on Wikipedia</h2>
+    <p class="mb-4 font-serif text-xl text-gray-700">Platforms that aggregate user content are the foundation of knowledge sharing on the Internet. But not all people on the Internet are interested in participating nicely, and some see it as an avenue to vent their rage, insecurity, and prejudices. This is particularly evident on Wikipedia, which runs on user-generated content and is dependent on user discussion to curate and approve content. Unfortunately, some users abuse this privilege by posting toxic comments.</p>
+    <p class="mb-4 font-serif text-xl text-gray-700">To maintain a positive community, toxic content and the users posting it need to be removed quickly. However, Wikipedia doesn't have the resources to hire full-time moderators to review every comment. This is where natural language processing can help.</p>
+    <h3 class="mb-2 text-xl font-bold">The Need for a Classification System</h3>
+    <p class="mb-4 font-serif text-xl text-gray-700">To address the problem of toxic comments on Wikipedia, our team of Navneet, Samakash, and Manish developed a classification system using natural language processing. The system uses a large open dataset of labeled Wikipedia Talk Page comments, provided by the Conversation AI team owned by Alphabet.</p>
+    <p class="mb-4 font-serif text-xl text-gray-700">The dataset has six labels that represent subcategories of toxicity, but our project focuses on a seventh label that represents the general toxicity of the comments. By classifying comments as toxic or non-toxic, we can identify and remove toxic comments more efficiently, thereby maintaining a more positive community on Wikipedia.</p>
+  </div>
+<!-- end overview -->
+  <!-- <div class="w-full md:w-1/2">
+    
+    <img src="https://img.freepik.com/free-vector/hand-drawn-business-people-illustration_52683-66661.jpg?w=1060&t=st=1682797695~exp=1682798295~hmac=d309ab0009f0fbc7351a39c2e5e96b81892d64539de3626bfa45a6f15eea9257" alt="Placeholder Image" class="object-cover w-full h-full">
+  </div> -->
+  <div class="w-full bg-[#EF8B2B] rounded-[25px] md:w-1/2 p-6">
+    <h2 class="mb-4 text-3xl font-bold text-white">Test Our Classification System</h2>
+    <p class="mb-8 text-white ">Input a comment to see the predicted classes from our machine learning model.</p>
+    <form class="space-y-4" action="#" method="POST" id="comment-form">
+      <div class="flex flex-wrap -mx-2">
+        <div class="w-full px-2">
+          <label for="comment" class="sr-only">Comment</label>
+          <textarea id="comment" name="comment" rows="3" class="block w-full px-4 py-2 placeholder-gray-400 transition duration-150 ease-in-out rounded-lg shadow-md form-input" placeholder="Enter your comment"></textarea>
+        </div>
+      </div>
+      <div class="flex justify-end">
+        <button type="submit" class="px-4 py-2 font-medium text-white bg-blue-500 rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+          <span id="submit-btn-text">Predict</span>
+          <span id="loading" class="hidden ml-2">
+            <svg class="w-5 h-5 text-white animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4a8 8 0 008 8 8 8 0 01-8-8z"></path>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+</section>
+<!-- end interactive section -->
+<section class="py-16 bg-white">
+  <div class="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        Impact of Toxic Comments
+      </h2>
+      <p class="mt-4 text-lg text-gray-500">
+        Below is a chart showing the frequency of toxic comments on Wikipedia and how our classification system has helped reduce them over time.
+      </p>
+    </div>
+    <div class="mt-10">
+      <div class="mx-auto">
+        <div class="flex flex-col lg:flex-row">
+          <div class="w-full lg:w-1/2">
+            <!-- Insert chart or graph here -->
+            <img src="https://www.kaggleusercontent.com/kf/125247856/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..S5SJUKXwN6DM4pZkyyzv2Q.oudq89ztxSABlibfexn4HyKG7TTasY_433ySIHB-FBYiz9Hy33QqDXttUvgqV2lxrZgAXLVh7D292N-nYPd84lJYVlSq42lIWR73FtmuOTdkhsH96M5sMVNqUyI82dyFXp7qP62KpZL7_mFLZzR1FR8H1owKEw65KdnLneyWo9YYLuTrPie9fhe5ZJMHb8hhrsbkz0G7PyamJf7b0wPBMGlDx5bFVljx0U0QYgy38tib7xyAQ20ApdAi1uk-Liz7jZCZhB1t-GuZb3RsUI5HUVo9Hn3Pes1TmEvb2SwyrOBxFTv970HM7_araXqFNuTHAfP1LmTzSQQmaXzaaF5Jem_umlyDGSIvudO8s3muDyfVAmoKOpPChEb0Sp0OUIEInoeT7lKduIVKvfsAm8H7xWEOSvzK0esBlZwCVC-Fd-DPDjLqYepwfaBPF7fqsQEWOxx9aSIJsAiWj7V4MdJQLR2qgWejKQ0sduW8k_iDi7bwFV1SrY6PsNB10yqpY0yHU9YoyXXfExiEAkRY3ZS7j5XRKR-lYRlE3Zi2Zn6sM8RM-3JYV-jzPMM8_eL-DBxBkpUQmbSBiHCWwAuyxijGTojjlDcgdU9KW-8miO10morqA6T4eZWn8HQqWmrY4_ai2malei7xgg52TKV-j7x_9O1Q7PllguStbPP90uBlRiGbAMn85KhLqzaXTXZRovJv.TXW8Kb10DFLCP2frODZunw/__results___files/__results___20_0.png" alt="a graph">
+          </div>
+          <div class="w-full pt-10 lg:w-1/2 lg:pt-0">
+            <p class="text-lg text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam commodo justo vel eleifend venenatis. Nam ultrices, felis id maximus suscipit, arcu nisi scelerisque lacus, eu porttitor tellus mauris vel lorem. Quisque malesuada vel sapien non venenatis. Vestibulum at felis eget orci dapibus blandit. Suspendisse potenti. Pellentesque commodo arcu vitae elit interdum, vel tristique ex tincidunt. Morbi facilisis turpis quis dui elementum tincidunt. Sed vel massa semper, pellentesque tortor quis, convallis ipsum. Maecenas laoreet velit non enim semper ultrices.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, incidunt! At optio explicabo debitis sed similique quibusdam libero nostrum illum numquam distinctio. Ipsa et debitis neque, nesciunt quae perspiciatis nostrum!
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="px-4 py-12 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="mb-8 text-3xl font-bold text-center">Testimonials</h2>
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div class="p-8 bg-gray-100 rounded-lg shadow-lg">
+        <p class="mb-4 leading-loose text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at enim quam. Nam scelerisque varius lacus, non elementum velit iaculis vel. Suspendisse posuere varius blandit. In vitae enim non lacus varius blandit vitae quis augue. Sed ut ipsum lacus. Integer semper velit vitae nisi bibendum aliquet.</p>
+        <p class="font-bold text-gray-600">John Doe, CEO at XYZ Corp</p>
+      </div>
+      <div class="p-8 bg-gray-100 rounded-lg shadow-lg">
+        <p class="mb-4 leading-loose text-gray-700">Maecenas ut erat felis. Fusce sodales varius augue, in ultricies metus luctus eu. Integer vitae interdum turpis. Vivamus sit amet facilisis neque. Sed tempor justo quis quam elementum elementum. Donec dictum feugiat ipsum, at lacinia lorem faucibus nec. </p>
+        <p class="font-bold text-gray-600">Jane Smith, Marketing Manager at ABC Corp</p>
+      </div>
+      <div class="p-8 bg-gray-100 rounded-lg shadow-lg">
+        <p class="mb-4 leading-loose text-gray-700">Morbi id erat sed est congue posuere sed sit amet urna. Donec venenatis, tellus eu posuere pulvinar, augue lorem ornare nisl, eget tincidunt eros risus id augue. Nunc sollicitudin sapien sapien, quis dictum elit facilisis vel. </p>
+        <p class="font-bold text-gray-600">Mark Johnson, COO at XYZ Corp</p>
+      </div>
+    </div>
+  </div>
+</section>      
+</body>
+<footer class=" bottom-0 w-full bg-[#381126] text-white py-6">
+  <div class="container flex items-center justify-between mx-auto">
+    <div class="flex flex-col">
+      <p class="text-lg font-bold">Additional Resources</p>
+      <ul class="mt-4">
+        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+        <li><a href="#" class="text-gray-400 hover:text-white">Terms and Conditions</a></li>
+      </ul>
+    </div>
+    <div class="flex flex-col items-center">
+      <p class="mb-4 text-lg font-bold">Contact Us</p>
+      <p class="text-gray-400"><i class="far fa-envelope"></i> info@yourwebsite.com</p>
+      <p class="mt-2 text-gray-400"><i class="fas fa-phone"></i> 1-800-123-4567</p>
+    </div>
+  </div>
+</footer>
+
+</html>
